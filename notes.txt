@@ -12,4 +12,11 @@ Outstanding problems:
 * Should probably create slide depicting the data model used
   by our ToDo apps
 
-* Where is pouchDB data stored? data limits?
+* Where is pouchDB data stored?  - default adapter uses:
+  - IndexedDB (https://www.w3.org/TR/IndexedDB/)
+  - WebSQL
+  data limits?
+
+* Note bleeding edge:
+  - Didn't get to fully explore state of IndexedDB/webSQL
+ 
