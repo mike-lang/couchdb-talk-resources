@@ -1,0 +1,15 @@
+Talk scratchpad:
+
+Blog post describing use of git to assist in live coding: http://www.jayway.com/2015/03/30/using-git-commits-to-drive-a-live-coding-session/
+
+
+
+Outstanding problems:
+
+* Where to put description of couchdb replication?
+* Where to put conflict resolution?
+
+* Should probably create slide depicting the data model used
+  by our ToDo apps
+
+* Where is pouchDB data stored? data limits?
