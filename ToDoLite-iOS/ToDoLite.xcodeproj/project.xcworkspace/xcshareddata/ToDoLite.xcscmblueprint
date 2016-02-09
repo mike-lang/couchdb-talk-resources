@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3CEAD9F91B3766ACE67A4DD0BCC0B35360438D86",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "729C98D7AB837F08AC0D29F142A4A0F6826018C4" : 0,
+    "3CEAD9F91B3766ACE67A4DD0BCC0B35360438D86" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7776AB4E-FE05-44F9-A648-6A9F448835C8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "729C98D7AB837F08AC0D29F142A4A0F6826018C4" : "",
+    "3CEAD9F91B3766ACE67A4DD0BCC0B35360438D86" : "ToDoLite-iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ToDoLite",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ToDoLite.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/couchbaselabs\/ToDoLite-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3CEAD9F91B3766ACE67A4DD0BCC0B35360438D86"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mike-lang\/couchdb-talk-resources.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "729C98D7AB837F08AC0D29F142A4A0F6826018C4"
+    }
+  ]
+}

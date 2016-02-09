@@ -1,0 +1,59 @@
+var PouchDB = require('pouchdb'),
+  uuid = require('node-uuid');
+
+var db = new PouchDB('http://localhost:5984/dataaccess');
+
+exports.createDocument = function createNewDocument(documentValues) {
+  if (!documentValues._id) {
+    documentValues._id = uuid.v4();
+  }
+
+  return db.put(documentValues)
+    .then((result) => {
+      console.log('I created a document!');
+    })
+    .catch((err) => {
+      console.log('An error happened!');
+    });
+  
+};
+
+var getDocumentById = exports.getDocumentById = function getDocumentById(id) {
+  return db.get(id)
+    .then((result) => {
+      console.log('I retrieved a document!');
+      return result;
+    });
+};
+
+exports.updateDocument = function updateDocument(id, newValues) {
+  var getLatestRevision = getDocumentById(id);
+
+  return getLatestRevision
+    .then((doc) => {
+      newValues._id = doc._id
+      newValues._rev = doc._rev
+      return db.put(newValues);
+    })
+    .then((result) => {
+      console.log('I updated a document!');
+      return result;
+    });
+}
+
+
+
+exports.deleteDocumentById = function deleteDocumentById(id) {
+  var getLatestRevision = getDocumentById(id);
+  
+  return getLatestRevision
+    .then((doc) => {
+      return db.remove(doc)
+    })
+    .then((result) => {
+      console.log('I deleted a document!');
+      return result;
+    });
+
+};
+
