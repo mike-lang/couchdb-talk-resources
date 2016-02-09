@@ -41,7 +41,18 @@ var getDocumentById = exports.getDocumentById = function getDocumentById(id) {
 
 exports.updateDocument = function updateDocument(id, newValues) {
 
+  var getLatestRevision = getDocumentById(id);
 
+  return getLatestRevision
+    .then((doc) => {
+      newValues._id = doc._id
+      newValues._rev = doc._rev
+      return db.put(newValues);
+    })
+    .then((result) => {
+      console.log('I updated a document!');
+      return result;
+    });
 
 }
 
