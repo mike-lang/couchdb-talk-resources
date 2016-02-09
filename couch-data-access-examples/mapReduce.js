@@ -18,7 +18,11 @@ exports.getAllBookTitles = function getAllBookTitles() {
 };
 
 exports.getExpensiveBooks = function getExpensiveBooks() {
-
+  return db.query(function (doc) {
+    if (doc.price > 20) {
+      emit(doc._id, doc);
+    }
+  });
 };
 
 exports.getPriceForOneOfEverything = function getPriceForOneOfEverything() {
