@@ -27,4 +27,20 @@ exports.getExpensiveBooks = function getExpensiveBooks() {
 
 exports.getPriceForOneOfEverything = function getPriceForOneOfEverything() {
 
+  var mapReduce = {
+    map: function(doc) {
+      emit(doc.title, doc.price);
+    },
+    reduce: function(keys, values, rereduce) {
+      if (rereduce) {
+        return sum(values);
+      } else {
+        return sum(values);
+      }
+    }
+  }
+
+  return db.query(mapReduce, {reduce: true});
+
+
 };
