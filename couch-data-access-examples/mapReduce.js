@@ -12,7 +12,9 @@ exports.getAllBooks = function getAllBooks() {
 
 
 exports.getAllBookTitles = function getAllBookTitles() {
-
+  return db.query(function(doc) {
+    emit(doc._id, doc.title);
+  });
 };
 
 exports.getExpensiveBooks = function getExpensiveBooks() {
