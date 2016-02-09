@@ -22,7 +22,11 @@ exports.createDocument = function createNewDocument(documentValues) {
 };
 
 exports.createDocumentWithId = function createDocumentWithId(id, documentValues) {
-
+  return db.get(id)
+    .then((result) => {
+      console.log('I retrieved a document!');
+      return result;
+    });
 };
 
 var getDocumentById = exports.getDocumentById = function getDocumentById(id) {
