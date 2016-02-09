@@ -4,18 +4,24 @@ var PouchDB = require('pouchdb'),
 var db = new PouchDB('http://localhost:5984/dataaccess');
 
 exports.createDocument = function createNewDocument(documentValues) {
-  if (!documentValues._id) {
-    documentValues._id = uuid.v4();
-  }
+
+  return db.post(documentValues)
+    .then((result) => {
+      console.log('I created a document!');
+      return result;
+    });
+
+};
+
+exports.createDocumentWithId = function createDocumentWithId(id, documentValues) {
+  documentValues._id = id;
 
   return db.put(documentValues)
     .then((result) => {
-      console.log('I created a document!');
-    })
-    .catch((err) => {
-      console.log('An error happened!');
+      console.log('I created a document with id: ' + id);
+      return result;
     });
-  
+
 };
 
 var getDocumentById = exports.getDocumentById = function getDocumentById(id) {
