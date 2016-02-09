@@ -31,6 +31,11 @@ exports.createDocumentWithId = function createDocumentWithId(id, documentValues)
 
 var getDocumentById = exports.getDocumentById = function getDocumentById(id) {
 
+  return db.get(id)
+    .then((result) => {
+      console.log('I retrieved a document!');
+      return result;
+    });
 
 };
 
