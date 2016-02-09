@@ -5,7 +5,9 @@ var PouchDB = require('pouchdb');
 var db = new PouchDB('http://localhost:5984/map-reduce');
 
 exports.getAllBooks = function getAllBooks() {
-
+  return db.query(function (doc) {
+    emit(doc._id, doc);
+  });
 };
 
 
