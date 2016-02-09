@@ -14,7 +14,11 @@ var PouchDB = require('pouchdb'),
 var db = new PouchDB('http://localhost:5984/dataaccess');
 
 exports.createDocument = function createNewDocument(documentValues) {
-
+  return db.post(documentValues)
+    .then((result) => {
+      console.log('I created a document!');
+      return result;
+    });
 };
 
 exports.createDocumentWithId = function createDocumentWithId(id, documentValues) {
