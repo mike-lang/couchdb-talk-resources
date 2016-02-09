@@ -9,17 +9,12 @@
   // EDITING STARTS HERE (you dont need to edit anything above this line)
 
   var db = new PouchDB('todos');
-  var remoteCouch = 'http://localhost:5984/todolite';
+  var remoteCouch = 'http://localhost:5984/todos';
 
-  
   db.changes({
     since: 'now',
     live: true
   }).on('change', showTodos);
-
-  
-
-  // Subscribe to changes
 
   // We have to create a new todo document and enter it in the database
   function addTodo(text) {
@@ -168,3 +163,4 @@
   }
 
 })();
+
