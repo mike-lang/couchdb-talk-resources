@@ -59,5 +59,14 @@ exports.updateDocument = function updateDocument(id, newValues) {
 
 
 exports.deleteDocumentById = function deleteDocumentById(id) {
-
+  var getLatestRevision = getDocumentById(id);
+  
+  return getLatestRevision
+    .then((doc) => {
+      return db.remove(doc)
+    })
+    .then((result) => {
+      console.log('I deleted a document!');
+      return result;
+    });
 };
