@@ -9,19 +9,26 @@
   // EDITING STARTS HERE (you dont need to edit anything above this line)
 
   var db = new PouchDB('todos');
-  var remoteCouch = 'http://localhost:5984/todos';
+  var remoteCouch = 'http://localhost:5984/todolite';
 
+  
   db.changes({
     since: 'now',
     live: true
   }).on('change', showTodos);
 
+  
+
+  // Subscribe to changes
+
   // We have to create a new todo document and enter it in the database
   function addTodo(text) {
+    var createdAt = new Date().toISOString();
     var todo = {
-      _id: new Date().toISOString(),
+      _id: createdAt,
       title: text,
-      completed: false
+      checked: false,
+      created_at: createdAt
     };
 
     db.put(todo, function callback(err, result) {
@@ -39,7 +46,7 @@
   }
 
   function checkboxChanged(todo, event) {
-    todo.completed = event.target.checked;
+    todo.checked = event.target.checked;
     db.put(todo);
   }
 
@@ -126,7 +133,7 @@
     li.appendChild(divDisplay);
     li.appendChild(inputEditTodo);
 
-    if (todo.completed) {
+    if (todo.checked) {
       li.className += 'complete';
       checkbox.checked = true;
     }
