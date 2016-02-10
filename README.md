@@ -3,8 +3,9 @@ Materials for talk on building a sync solution with CouchDB, PouchDB, &amp; Couc
 
 This talk was presented on 2/9/16 to the Interactive Developers of St
 Louis Meetup group - A kind, appreciative, and welcoming audience as
-one could ever expect.  Many thanks to Jason Hanson (@jayfour000) and
-Jeff Roberts (@JeffBNimble) for making this group possible.
+one could ever expect.  Many thanks to [Jason
+Hanson](https://github.com/jayfour000) and
+[Jeff Roberts](https://github.com/JeffBNimble) for making this group possible.
 
 Includes:
 * [Keynote slides used during the talk](https://github.com/mike-lang/couchdb-talk-resources/blob/master/SyncTalkSlides.key)
