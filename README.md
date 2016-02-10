@@ -1,6 +1,11 @@
 # couchdb-talk-resources
 Materials for talk on building a sync solution with CouchDB, PouchDB, &amp; Couchbase Lite
 
+This talk was presented on 2/9/16 to the Interactive Developers of St
+Louis Meetup group - A kind, appreciative, and welcoming audience as
+one could ever expect.  Many thanks to Jason Hanson (@jayfour000) and
+Jeff Roberts (@JeffBNimble) for making this group possible.
+
 Includes:
 * [Keynote slides used during the talk](https://github.com/mike-lang/couchdb-talk-resources/blob/master/SyncTalkSlides.key)
 * [Data Access demostration code used during the talk](https://github.com/mike-lang/couchdb-talk-resources/tree/master/couch-data-access-examples) - The skeletal form can be retrieved by checking out tag `pouchdb-access-demo-start` and the completed examples can be retrieved by checking out master's HEAD or `pouchdb-access-demo-end`.  All examples used node 4.x installed on OSX.  The customized interactive REPL that I used during this portion of the talk may be found here: https://github.com/thirdiron/promise-repl Technically I guess its a Read, Evaluate, Resolve, Print, Loop, but RERPL is a garbage acronym, so its named PREPL, short for Promise-REPL.
