@@ -2,7 +2,7 @@
 Materials for talk on building a sync solution with CouchDB, PouchDB, &amp; Couchbase Lite
 
 This talk was presented on 2/9/16 to the Interactive Developers of St
-Louis Meetup group - A kind, appreciative, and welcoming audience as
+Louis Meetup group - a most kind, appreciative, and welcoming audience as
 one could ever expect.  Many thanks to [Jason
 Hanson](https://github.com/jayfour000) and
 [Jeff Roberts](https://github.com/JeffBNimble) for making this group possible.
